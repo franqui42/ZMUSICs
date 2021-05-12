@@ -10,7 +10,8 @@ class Album (models.Model):
     nombre = models.CharField(max_length=500)
     descripcion = models.TextField(max_length=500)
     año = models.IntegerField(max_length=100)
-    genero = models.ManyToManyField(Genero,null=True,blank=True)
+    foto = models.ImageField(upload_to='album',null=True,blank=True)
+    genero = models.ManyToManyField(Genero)
    
     def __str__(self):
         return self.nombre + ' '+ str(self.año)

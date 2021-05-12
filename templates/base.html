@@ -8,23 +8,22 @@
         {% block titulo %}
         {% endblock titulo %}
     </title>
-    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css home/base.css">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">inicio</a>
+      <a class="navbar-brand" href="{% url 'inicio_view' %}">INICIO</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="{% url 'album_view' %}">albums</a>
-          <a class="nav-link" href="#">ver album</a>
-          <a class="nav-link" href="#">agregar album</a>
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'album_view' %}">ALBUMS</a>
+          <a class="nav-link" href="{% url 'agregar_album_view' %}">AGREGAR ALBUM</a>
+          <a class="nav-link" href="{% url 'conoce_view' %}" tabindex="-1" >CONOCE MAS</a>
         </div>
       </div>
     </div>

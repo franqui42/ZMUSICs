@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block titulo %}
+    agregar album
+{% endblock titulo %}
+
+{% block contenido %}
+<link rel="stylesheet" href="/static/css home/agregar.css">
+    <p><h1>agregar album</h1></p>
+    <p>agregar albums de manera facil </p><br>
+
+    <div class="cont">
+        <form class="agr" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{formulario.as_p}}
+            <div class="btn">
+                <input class="guardar" type="submit" value="guardar album">
+            </div>
+        
+        </form>
+    </div>
+{% endblock contenido%}

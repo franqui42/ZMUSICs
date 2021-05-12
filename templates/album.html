@@ -5,13 +5,18 @@
 {%endblock titulo %}
 
 {% block contenido %}
+<link rel="stylesheet" href="/static/css home/album.css">
+
+<h2>albums musicales</h2><br>
+
+<a href="{% url 'agregar_album_view' %}"type="button" class="btn btn-primary">agregar album</a>
   <table class="table">
     <thead>
       <tr>
         <th scope="col">artista</th>
         <th scope="col">nombre</th>
-        <th scope="col">descripcion</th>
-        <th scope="col">genero</th>
+        <th scope="col">año</th>
+        <th scope="col">portada</th>
       </tr>
     </thead>
     <tbody>
@@ -19,8 +24,9 @@
       <tr>
         <td>{{a.artista}}</td>
         <td>{{a.nombre}}</td>
-        <td>{{a.descripcion}}</td>
-        <td>{{a.genero}}</td>
+        <td>{{a.año}}</td>
+        <td><img src="/media/{{a.foto}}" alt="" height="100px"></td>
+        <td><a href="{% url 'ver_album_view' id_alb=a.id%}" class="btn btn-info"> ver</a></td>
       </tr>
       {% endfor %}
     </tbody>
