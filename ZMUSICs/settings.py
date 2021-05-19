@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-68k+q-^@rsod+p9ng_w^ay1up=_tj@2*$$6yvup_&z#p#1_j+j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ZMUSICs.herokuapp.com']
 
 
 # Application definition
@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home'
+    'home',
+    'webservices',
+    'rest_framework',
+    'gunicorn',
+    'psycopg2',
 ]
 
 MIDDLEWARE = [
@@ -76,14 +80,25 @@ WSGI_APPLICATION = 'ZMUSICs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ZMUSICs',
-        'USER': 'root',
-        'Password': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.psycopg2',
+        'NAME': 'd2rr13k37h4gdg',
+        'USER': 'ebqhjaisdiqwlf',
+        'Password': '9d968e29e39b4b6c2dc8c6aa423bf90063ee9ef1c2432b2c2a4789fde7729dcf',
+        'HOST': 'ec2-54-152-185-191.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ZMUSICs',
+#         'USER': 'root',
+#         'Password': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation
@@ -125,10 +140,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #directorios
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
-]
+#STATICFILES_DIRS = [
+#   BASE_DIR / "static",
+#   '/var/www/static/',
+#]
+
+STATIC_ROOT = "static"
+
 #Servidor de medios
 MEDIA_URL = '/media/'
 MEDIA_ROOT = "media"

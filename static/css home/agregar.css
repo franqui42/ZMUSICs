@@ -1,3 +1,4 @@
+
 body{
     background-image: url(/static/img/wallpaperbetter.jpg);
 
@@ -7,4 +8,7 @@ body{
 }
 .guardar{
  color: black;
+}
+.agr{
+    color: black;
 }

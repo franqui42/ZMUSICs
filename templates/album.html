@@ -27,6 +27,7 @@
         <td>{{a.año}}</td>
         <td><img src="/media/{{a.foto}}" alt="" height="100px"></td>
         <td><a href="{% url 'ver_album_view' id_alb=a.id%}" class="btn btn-info"> ver</a></td>
+        <td><a href="{% url 'editar_view' id_alb=a.id%}" class="btn btn-secondary"> editar</a></td>
       </tr>
       {% endfor %}
     </tbody>

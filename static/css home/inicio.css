@@ -1,7 +1,11 @@
+
 body,html{
     margin: 0;
     padding: 0;
     background-image: url(/static/img/conoce.jpg);
+}
+p{
+    color: white;
 }
 .contenido,section{
     font-size: 26px;
@@ -20,15 +24,7 @@ body,html{
 #prod{
     width: 50%;
 }
-.opacida{
-    background-color: rgb(44, 45, 47);
-}
 section{
     margin-top: 140px;
     margin-bottom: 140px;
 }
-#footer {
-    margin: 0 auto;
-    background-color: rgb(147, 189, 189);
-    text-align: center;
-  }

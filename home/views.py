@@ -27,5 +27,16 @@ def agregar_album (request):
 
         return render(request, 'agregar_album.html',locals())
 
+def vista_editar(request,id_alb):
+    objeto =Album.objects.get(id=id_alb)
+    if request.method == 'POST':
+        formulario= agregar_album_form(request.POST, request.FILE,instance=objeto)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('/albums/')
+    else:
+        formulario = agregar_album_form(instance=objeto)
+    return render(request, 'agregar_album.html',locals())
+
 def vista_conoce(request):
     return render(request, 'conoce.html',locals())
