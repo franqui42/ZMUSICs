@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'ZMUSICs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd2rr13k37h4gdg',
         'USER': 'ebqhjaisdiqwlf',
         'Password': '9d968e29e39b4b6c2dc8c6aa423bf90063ee9ef1c2432b2c2a4789fde7729dcf',
