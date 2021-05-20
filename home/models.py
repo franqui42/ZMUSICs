@@ -9,7 +9,7 @@ class Album (models.Model):
     artista = models.CharField(max_length=100)
     nombre = models.CharField(max_length=500)
     descripcion = models.TextField(max_length=500)
-    año = models.IntegerField(max_length=100)
+    año = models.IntegerField()
     foto = models.ImageField(upload_to='album',null=True,blank=True)
     genero = models.ManyToManyField(Genero)
    
