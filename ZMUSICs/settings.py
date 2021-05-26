@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-68k+q-^@rsod+p9ng_w^ay1up=_tj@2*$$6yvup_&z#p#1_j+j'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'ZMUSICs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd2rr13k37h4gdg',
         'USER': 'ebqhjaisdiqwlf',
         'Password': '9d968e29e39b4b6c2dc8c6aa423bf90063ee9ef1c2432b2c2a4789fde7729dcf',
