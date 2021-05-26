@@ -92,10 +92,10 @@ WSGI_APPLICATION = 'ZMUSICs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2rr13k37h4gdg',
-        'USER': 'ebqhjaisdiqwlf',
-        'Password': '9d968e29e39b4b6c2dc8c6aa423bf90063ee9ef1c2432b2c2a4789fde7729dcf',
-        'HOST': 'ec2-54-152-185-191.compute-1.amazonaws.com',
+        'NAME': 'd429vttq8lv0bt',
+        'USER': 'opladijacfrbky',
+        'Password': '41b73b215bbde4f468a259c57d073a08a2c5c3006b2235ddc65638ae9966b0ad',
+        'HOST': 'ec2-3-234-22-132.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
